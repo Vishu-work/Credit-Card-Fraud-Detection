@@ -25,7 +25,7 @@ This project builds a **fraud detection model** using **Logistic Regression**, t
 
 ---
 
-### 🗂️ Project Structure
+## 🗂️ Project Structure
 
 ```text
 📁 credit-card-fraud-detector/
@@ -36,6 +36,10 @@ This project builds a **fraud detection model** using **Logistic Regression**, t
 ├── ⚖️ scaler.pkl               → Saved StandardScaler for feature scaling
 ├── 📜 requirements.txt         → Python dependencies
 └── 📘 README.md                → Project documentation
+
+markdown
+Copy
+Edit
 
 ---
 
