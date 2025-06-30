@@ -1,84 +1,71 @@
-💳 Credit Card Fraud Detection with Logistic Regression & Gradio
-This project builds a fraud detection model using Logistic Regression trained on the popular creditcard.csv dataset. The trained model is deployed using Gradio, allowing for an easy-to-use web interface to predict whether a transaction is fraudulent or not.
+# 💳 Credit Card Fraud Detection using Logistic Regression & Gradio
 
-📊 Dataset
-Source: Kaggle Credit Card Fraud Detection Dataset
+This project builds a **fraud detection model** using **Logistic Regression**, trained on the widely used **Kaggle Credit Card Fraud Detection Dataset**. The trained model is deployed using **Gradio**, offering an intuitive web interface to predict whether a transaction is fraudulent or not.
 
-Records: 284,807 transactions
+---
 
-Features:
+## 📊 Dataset
 
-30 input features (V1 to V28, Time, and Amount)
+- **Source**: [Kaggle - Credit Card Fraud Detection Dataset](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)
+- **Records**: 284,807 transactions
+- **Features**:
+  - 30 input variables: `V1` to `V28`, `Time`, and `Amount`
+  - `Class`: Target variable (`0 = Non-fraudulent`, `1 = Fraudulent`)
 
-Target: Class (0 = Non-fraudulent, 1 = Fraudulent)
+---
 
-✅ Features
-🔍 Detects fraud using Logistic Regression
+## ✅ Features
 
-🧼 Scaled input features using StandardScaler
+- 🔍 Predicts fraud using **Logistic Regression**
+- 📉 Scales input features with `StandardScaler`
+- ⚖️ Handles **imbalanced dataset** with class weighting
+- 📊 Evaluates model with **accuracy, precision, recall, F1-score**
+- 🌐 Deploys model using **Gradio** for a web interface
+- 🛡️ Includes **robust exception handling**
 
-🧠 Handles highly imbalanced dataset
+---
 
-🧪 Train-test evaluation with accuracy, recall, precision, F1-score
+## 🗂️ Project Structure
 
-🌐 Interactive web interface using Gradio
-
-🛡️ Includes exception handling for invalid inputs
-
-🗂️ Project Structure
-bash
-Copy
-Edit
 credit-card-fraud-detector/
 │
-├── creditcard.csv              # Dataset file
-├── train_model.py              # Model training script
-├── app.py                      # Gradio app script
-├── model.pkl                   # Trained logistic regression model
-├── scaler.pkl                  # Saved StandardScaler
-├── requirements.txt
+├── creditcard.csv # Dataset file
+├── train_model.py # Script to train and save model
+├── app.py # Gradio app script
+├── model.pkl # Saved logistic regression model
+├── scaler.pkl # Saved StandardScaler
+├── requirements.txt # Dependencies
 └── README.md
-🧠 How It Works
-Data Preprocessing
 
-Drop target column and scale features using StandardScaler
-
-Model Training
-
-Use LogisticRegression with class weight adjustments for imbalance
-
-Model Saving
-
-Save the trained model and scaler using joblib
-
-Gradio Deployment
-
-Accept user input through UI and return prediction (Fraud/Not Fraud)
-
-🚀 Getting Started
-1. Clone the Repository
-bash
+markdown
 Copy
 Edit
+
+---
+
+## 🧠 How It Works
+
+### 1. **Data Preprocessing**
+- Drop the `Class` column from features
+- Scale numerical values using `StandardScaler`
+
+### 2. **Model Training**
+- Train a `LogisticRegression` model
+- Use `class_weight='balanced'` to manage data imbalance
+
+### 3. **Model Saving**
+- Save the trained model and scaler using `joblib`
+
+### 4. **Gradio Deployment**
+- Accepts 30 inputs: `V1-V28`, `Amount`, `Time`
+- Outputs: `"Fraudulent"` or `"Not Fraudulent"`
+
+---
+
+## 🚀 Getting Started
+
+### 1️⃣ Clone the Repository
+
+```bash
 git clone https://github.com/yourusername/credit-card-fraud-detector.git
 cd credit-card-fraud-detector
-2. Install Dependencies
-bash
-Copy
-Edit
-pip install -r requirements.txt
-3. Train the Model (Optional)
-bash
-Copy
-Edit
-python train_model.py
-4. Run the Gradio App
-bash
-Copy
-Edit
-python app.py
-🌐 Gradio Interface
-Inputs: 30 features (as numerical inputs, same as V1 to V28, Amount, Time)
-
-Output: "Fraudulent" or "Not Fraudulent"
-
