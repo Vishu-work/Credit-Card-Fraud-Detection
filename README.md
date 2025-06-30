@@ -27,15 +27,20 @@ This project builds a **fraud detection model** using **Logistic Regression**, t
 
 ## 🗂️ Project Structure
 
-credit-card-fraud-detector/
+📦 credit-card-fraud-detector
+├── 📁 data/
+│   └── 📄 creditcard.csv         # Original dataset from Kaggle
 │
-├── creditcard.csv # Dataset file
-├── train_model.py # Script to train and save model
-├── app.py # Gradio app script
-├── model.pkl # Saved logistic regression model
-├── scaler.pkl # Saved StandardScaler
-├── requirements.txt # Dependencies
-└── README.md
+├── 🧠 train_model.py             # Script to clean, train, and save the model
+├── 🌐 app.py                     # Gradio UI for making real-time predictions
+│
+├── 📦 models/
+│   ├── model.pkl                 # Saved Logistic Regression model
+│   └── scaler.pkl                # Saved StandardScaler instance
+│
+├── 📄 requirements.txt           # List of Python dependencies
+├── 📘 README.md                  # Project documentation (this file)
+└── 📄 .gitignore                 # Files to ignore in version control
 
 markdown
 Copy
@@ -62,10 +67,3 @@ Edit
 
 ---
 
-## 🚀 Getting Started
-
-### 1️⃣ Clone the Repository
-
-```bash
-git clone https://github.com/yourusername/credit-card-fraud-detector.git
-cd credit-card-fraud-detector
