@@ -62,10 +62,3 @@ Edit
 
 ---
 
-## 🚀 Getting Started
-
-### 1️⃣ Clone the Repository
-
-```bash
-git clone https://github.com/yourusername/credit-card-fraud-detector.git
-cd credit-card-fraud-detector
